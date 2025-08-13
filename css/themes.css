@@ -1,0 +1,365 @@
+/* Theme Variables and Styles */
+
+/* Enchanted Forest Theme */
+.theme-enchanted {
+    --primary-color: #2d5016;
+    --secondary-color: #4a7c59;
+    --accent-color: #7fbc69;
+    --accent-hover: #6ba055;
+    
+    --bg-primary: linear-gradient(135deg, #1a3409 0%, #2d5016 50%, #4a7c59 100%);
+    --bg-secondary: rgba(45, 80, 22, 0.9);
+    --story-bg: rgba(255, 255, 255, 0.15);
+    --modal-bg: rgba(45, 80, 22, 0.95);
+    
+    --text-primary: #f0f8e8;
+    --text-secondary: #c5e6b8;
+    --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
+    --border-color: rgba(127, 188, 105, 0.3);
+    --input-bg: rgba(255, 255, 255, 0.1);
+    --search-result-bg: rgba(255, 255, 255, 0.1);
+    --search-result-hover: rgba(255, 255, 255, 0.2);
+    --reset-btn-bg: #7fbc69;
+    --reset-btn-color: #1a3409;
+    --reset-btn-hover: #6ba055;
+    --loading-bg: linear-gradient(135deg, #1a3409 0%, #2d5016 100%);
+    
+    background: var(--bg-primary);
+    background-attachment: fixed;
+}
+
+.theme-enchanted::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/backgrounds/forest1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* Royal Castle Theme */
+.theme-castle {
+    --primary-color: #4a0e2b;
+    --secondary-color: #7a2448;
+    --accent-color: #d4af37;
+    --accent-hover: #b8941f;
+    
+    --bg-primary: linear-gradient(135deg, #2d0419 0%, #4a0e2b 50%, #7a2448 100%);
+    --bg-secondary: rgba(74, 14, 43, 0.9);
+    --story-bg: rgba(255, 255, 255, 0.15);
+    --modal-bg: rgba(74, 14, 43, 0.95);
+    
+    --text-primary: #fdf8e8;
+    --text-secondary: #e8d5a3;
+    --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    
+    --border-color: rgba(212, 175, 55, 0.3);
+    --input-bg: rgba(255, 255, 255, 0.1);
+    --search-result-bg: rgba(255, 255, 255, 0.1);
+    --search-result-hover: rgba(255, 255, 255, 0.2);
+    --reset-btn-bg: #d4af37;
+    --reset-btn-color: #2d0419;
+    --reset-btn-hover: #b8941f;
+    --loading-bg: linear-gradient(135deg, #2d0419 0%, #4a0e2b 100%);
+    
+    background: var(--bg-primary);
+    background-attachment: fixed;
+}
+
+.theme-castle::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/backgrounds/castle1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+/* Starry Night Theme */
+.theme-starry {
+    --primary-color: #0f1419;
+    --secondary-color: #1a2332;
+    --accent-color: #64b5f6;
+    --accent-hover: #42a5f5;
+    
+    --bg-primary: linear-gradient(135deg, #0a0e14 0%, #0f1419 50%, #1a2332 100%);
+    --bg-secondary: rgba(15, 20, 25, 0.9);
+    --story-bg: rgba(255, 255, 255, 0.1);
+    --modal-bg: rgba(15, 20, 25, 0.95);
+    
+    --text-primary: #e8f3ff;
+    --text-secondary: #b3d9ff;
+    --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    
+    --border-color: rgba(100, 181, 246, 0.3);
+    --input-bg: rgba(255, 255, 255, 0.1);
+    --search-result-bg: rgba(255, 255, 255, 0.1);
+    --search-result-hover: rgba(255, 255, 255, 0.2);
+    --reset-btn-bg: #64b5f6;
+    --reset-btn-color: #0a0e14;
+    --reset-btn-hover: #42a5f5;
+    --loading-bg: linear-gradient(135deg, #0a0e14 0%, #0f1419 100%);
+    
+    background: var(--bg-primary);
+    background-attachment: fixed;
+}
+
+.theme-starry::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/backgrounds/starry1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* Ancient Parchment Theme */
+.theme-parchment {
+    --primary-color: #5d4e37;
+    --secondary-color: #8b7355;
+    --accent-color: #cd853f;
+    --accent-hover: #b8751f;
+    
+    --bg-primary: linear-gradient(135deg, #3e332a 0%, #5d4e37 50%, #8b7355 100%);
+    --bg-secondary: rgba(93, 78, 55, 0.9);
+    --story-bg: rgba(255, 248, 220, 0.9);
+    --modal-bg: rgba(93, 78, 55, 0.95);
+    
+    --text-primary: #2f1b14;
+    --text-secondary: #5d4e37;
+    --text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+    
+    --border-color: rgba(205, 133, 63, 0.5);
+    --input-bg: rgba(255, 248, 220, 0.8);
+    --search-result-bg: rgba(255, 248, 220, 0.6);
+    --search-result-hover: rgba(255, 248, 220, 0.8);
+    --reset-btn-bg: #cd853f;
+    --reset-btn-color: #2f1b14;
+    --reset-btn-hover: #b8751f;
+    --loading-bg: linear-gradient(135deg, #3e332a 0%, #5d4e37 100%);
+    
+    background: var(--bg-primary);
+    background-attachment: fixed;
+}
+
+.theme-parchment::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/backgrounds/parchment1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.theme-parchment .story-container {
+    background: rgba(255, 248, 220, 0.95);
+    color: var(--text-primary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.theme-parchment .modal-content {
+    background: rgba(255, 248, 220, 0.95);
+    color: var(--text-primary);
+}
+
+.theme-parchment #search-input,
+.theme-parchment .setting-group input,
+.theme-parchment .setting-group select {
+    background: rgba(255, 248, 220, 0.9);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+/* Dark Mode Styles */
+body.dark-mode.theme-enchanted {
+    --bg-primary: linear-gradient(135deg, #0a1405 0%, #1a3409 50%, #2d5016 100%);
+    --story-bg: rgba(0, 0, 0, 0.7);
+    --modal-bg: rgba(26, 52, 9, 0.95);
+    --text-primary: #a8d48a;
+    --text-secondary: #7fbc69;
+}
+
+body.dark-mode.theme-castle {
+    --bg-primary: linear-gradient(135deg, #1a0510 0%, #2d0419 50%, #4a0e2b 100%);
+    --story-bg: rgba(0, 0, 0, 0.7);
+    --modal-bg: rgba(45, 4, 25, 0.95);
+    --text-primary: #e8d5a3;
+    --text-secondary: #d4af37;
+}
+
+body.dark-mode.theme-starry {
+    --bg-primary: linear-gradient(135deg, #050a0f 0%, #0a0e14 50%, #0f1419 100%);
+    --story-bg: rgba(0, 0, 0, 0.8);
+    --modal-bg: rgba(10, 14, 20, 0.95);
+    --text-primary: #b3d9ff;
+    --text-secondary: #64b5f6;
+}
+
+body.dark-mode.theme-parchment {
+    --bg-primary: linear-gradient(135deg, #2a231c 0%, #3e332a 50%, #5d4e37 100%);
+    --story-bg: rgba(47, 27, 20, 0.9);
+    --modal-bg: rgba(62, 51, 42, 0.95);
+    --text-primary: #d4c4a8;
+    --text-secondary: #cd853f;
+}
+
+/* Theme-specific particle effects */
+.theme-enchanted .particle {
+    color: #7fbc69;
+}
+
+.theme-castle .particle {
+    color: #d4af37;
+}
+
+.theme-starry .particle {
+    color: #64b5f6;
+}
+
+.theme-parchment .particle {
+    color: #cd853f;
+}
+
+/* Enhanced visual effects for themes */
+.theme-enchanted .story-card:hover {
+    box-shadow: 0 20px 40px rgba(127, 188, 105, 0.3);
+}
+
+.theme-castle .story-card:hover {
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+}
+
+.theme-starry .story-card:hover {
+    box-shadow: 0 20px 40px rgba(100, 181, 246, 0.3);
+}
+
+.theme-parchment .story-card:hover {
+    box-shadow: 0 20px 40px rgba(205, 133, 63, 0.3);
+}
+
+/* Theme transition animations */
+body {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Magic hover effects */
+.theme-enchanted .control-btn:hover,
+.theme-enchanted .nav-btn:hover {
+    box-shadow: 0 0 20px rgba(127, 188, 105, 0.6);
+}
+
+.theme-castle .control-btn:hover,
+.theme-castle .nav-btn:hover {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+}
+
+.theme-starry .control-btn:hover,
+.theme-starry .nav-btn:hover {
+    box-shadow: 0 0 20px rgba(100, 181, 246, 0.6);
+}
+
+.theme-parchment .control-btn:hover,
+.theme-parchment .nav-btn:hover {
+    box-shadow: 0 0 20px rgba(205, 133, 63, 0.6);
+}
+
+/* Sparkle effect for magical elements */
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.magical-element::before {
+    content: '✨';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    animation: sparkle 2s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* Enhanced scrollbar styling for themes */
+.theme-enchanted ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #7fbc69, #4a7c59);
+}
+
+.theme-castle ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #d4af37, #7a2448);
+}
+
+.theme-starry ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #64b5f6, #1a2332);
+}
+
+.theme-parchment ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #cd853f, #5d4e37);
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-clip: content-box;
+    filter: brightness(1.2);
+}
+
+/* Theme-specific text shadows and glows */
+.theme-enchanted .main-title {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(127, 188, 105, 0.3);
+}
+
+.theme-castle .main-title {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.theme-starry .main-title {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(100, 181, 246, 0.5);
+}
+
+.theme-parchment .main-title {
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), 0 0 15px rgba(205, 133, 63, 0.4);
+}

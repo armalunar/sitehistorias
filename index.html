@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contos Clássicos Mágicos</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+</head>
+<body class="theme-enchanted">
+
+    <div id="particles-container"></div>
+    
+    <audio id="ambient-audio" loop>
+        <source src="audio/forest_ambient.mp3" type="audio/mpeg">
+    </audio>
+    
+
+    <audio id="page-turn-audio">
+        <source src="audio/page-turn.mp3" type="audio/mpeg">
+    </audio>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-book-open"></i>
+                <span>Contos Clássicos</span>
+            </div>
+            
+
+            <div class="theme-selector">
+                <button class="theme-btn" data-theme="enchanted" title="Floresta Encantada">🌲</button>
+                <button class="theme-btn" data-theme="castle" title="Castelo Real">🏰</button>
+                <button class="theme-btn" data-theme="starry" title="Noite Estrelada">🌌</button>
+                <button class="theme-btn" data-theme="parchment" title="Papel Antigo">📜</button>
+            </div>
+            
+
+            <div class="controls">
+                <button id="search-btn" class="control-btn" title="Buscar">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button id="settings-btn" class="control-btn" title="Configurações">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <button id="audio-toggle" class="control-btn" title="Som Ambiente">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <button id="dark-mode-toggle" class="control-btn" title="Modo Escuro">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+
+    <div id="search-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Buscar nos Contos</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Digite sua busca...">
+                <button id="search-execute">Buscar</button>
+            </div>
+            <div id="search-results"></div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Configurações</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="settings-container">
+                <div class="setting-group">
+                    <label>Tamanho da Fonte:</label>
+                    <input type="range" id="font-size-slider" min="14" max="24" value="16">
+                    <span id="font-size-value">16px</span>
+                </div>
+                
+                <div class="setting-group">
+                    <label>Estilo da Fonte:</label>
+                    <select id="font-family-select">
+                        <option value="'Cormorant Garamond', serif">Serifada Clássica</option>
+                        <option value="'Cinzel', serif">Caligrafia Elegante</option>
+                        <option value="'UnifrakturMaguntia', cursive">Livro Antigo</option>
+                    </select>
+                </div>
+                
+                <div class="setting-group">
+                    <label>Cursor Personalizado:</label>
+                    <select id="cursor-select">
+                        <option value="default">Padrão</option>
+                        <option value="feather">Pena ✒️</option>
+                        <option value="wand">Varinha ✨</option>
+                        <option value="flower">Flor 🌸</option>
+                    </select>
+                </div>
+                
+                <div class="setting-group">
+                    <label>Efeitos de Partículas:</label>
+                    <input type="checkbox" id="particles-toggle" checked>
+                </div>
+                
+                <button id="reset-settings" class="reset-btn">Restaurar Padrão</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <section id="home-page" class="page active">
+            <div class="hero-section">
+                <h1 class="main-title">Contos Clássicos Mágicos</h1>
+                <p class="subtitle">Uma coleção encantada das mais belas histórias de todos os tempos</p>
+            </div>
+            
+            <div class="stories-grid">
+                <div class="story-card" data-story="cinderella">
+                    <div class="card-image">
+                        <img src="img/covers/cinderella.jpg" alt="Cinderela" loading="lazy">
+                        <div class="card-overlay">
+                            <h3>Cinderela</h3>
+                            <p>Charles Perrault (1697)</p>
+                            <div class="bookmark-indicator" data-story="cinderella"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card" data-story="sleeping-beauty">
+                    <div class="card-image">
+                        <img src="img/covers/sleeping_beauty.jpeg" alt="A Bela Adormecida" loading="lazy">
+                        <div class="card-overlay">
+                            <h3>A Bela Adormecida</h3>
+                            <p>Charles Perrault (1697)</p>
+                            <div class="bookmark-indicator" data-story="sleeping-beauty"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card" data-story="snow-white">
+                    <div class="card-image">
+                        <img src="img/covers/snow_white.jpg" alt="Branca de Neve" loading="lazy">
+                        <div class="card-overlay">
+                            <h3>Branca de Neve</h3>
+                            <p>Irmãos Grimm (1812)</p>
+                            <div class="bookmark-indicator" data-story="snow-white"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card" data-story="rapunzel">
+                    <div class="card-image">
+                        <img src="img/covers/rapunzel.jpg" alt="Rapunzel" loading="lazy">
+                        <div class="card-overlay">
+                            <h3>Rapunzel</h3>
+                            <p>Irmãos Grimm (1812)</p>
+                            <div class="bookmark-indicator" data-story="rapunzel"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card" data-story="beauty-beast">
+                    <div class="card-image">
+                        <img src="img/covers/beauty-beast.jpg" alt="A Bela e a Fera" loading="lazy">
+                        <div class="card-overlay">
+                            <h3>A Bela e a Fera</h3>
+                            <p>Jeanne-Marie Leprince de Beaumont (1756)</p>
+                            <div class="bookmark-indicator" data-story="beauty-beast"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card" data-story="red-riding-hood">
+                    <div class="card-image">
+                        <img src="img/covers/red-riding-hood.jpg" alt="Chapeuzinho Vermelho" loading="lazy">
+                        <div class="card-overlay">
+                            <h3>Chapeuzinho Vermelho</h3>
+                            <p>Charles Perrault (1697)</p>
+                            <div class="bookmark-indicator" data-story="red-riding-hood"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card" data-story="princess-frog">
+                    <div class="card-image">
+                        <img src="img/covers/princess-frog.jpg" alt="A Princesa e o Sapo" loading="lazy">
+                        <div class="card-overlay">
+                            <h3>A Princesa e o Sapo</h3>
+                            <p>Contos Populares</p>
+                            <div class="bookmark-indicator" data-story="princess-frog"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Reading Page -->
+        <section id="story-page" class="page">
+            <div class="story-navigation">
+                <button id="back-to-home" class="nav-btn">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </button>
+                <div class="story-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+                <button id="bookmark-btn" class="nav-btn">
+                    <i class="fas fa-bookmark"></i>
+                </button>
+            </div>
+            
+            <div class="story-container">
+                <div class="story-header">
+                    <h1 id="story-title"></h1>
+                    <p id="story-author"></p>
+                </div>
+                
+                <div class="story-content" id="story-text">
+                    <!-- Story content will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Carregando contos mágicos...</p>
+        </div>
+    </div>
+
+    <script src="js/stories.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/themes.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
